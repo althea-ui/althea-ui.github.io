@@ -177,9 +177,31 @@ opacity: 1;
     font-size: 30px;
 }
 
-.contactetcv {
-    font-family: "articulat-cf", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
 
+/* Zone de gauche : on laisse de la place pour le panneau */
+.accueil main {
+  margin-right: 33%;
+  padding: 20px;
+}
+
+.accueil main img {
+  width: 100%;
+}
+
+/* Panneau de droite : fixe */
+.accueil aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 33%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid black;
+}
+
+@media (max-width: 700px) {
+  .accueil main { margin-right: 0; }
+  .accueil aside { position: static; width: 100%; height: auto; border-left: none; }
 }
