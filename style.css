@@ -35,7 +35,7 @@ h2{
     font-size: 15px;
     margin: 12px 0 14px 0;
     line-height: 1.4;
-    max-width: 50%;
+    max-width: 400%;
 }
 
 header{
@@ -47,7 +47,7 @@ header{
 
 .grid{
     display: grid;
-    gap: 0px;
+    gap: px;
     margin: auto;
 }
 
