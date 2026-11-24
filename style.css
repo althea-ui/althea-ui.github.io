@@ -103,6 +103,23 @@ h3 {
     opacity: 0.7;
 }
 
+.download-link {
+    color: rgb(50, 59, 76);
+    text-decoration: none;
+}
+
+.download-link:visited,
+.download-link:hover,
+.download-link:active {
+    color: rgb(50, 59, 76);
+    text-decoration: none;
+}
+
+.download-link h2 {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Grille d'images */
 .grid {
     display: grid;
