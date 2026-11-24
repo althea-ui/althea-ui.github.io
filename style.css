@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Bocalupo;
-    src: url("fonts/Bocalupo-Regular.woff2") format("woff2");
+    font-family: Helvetica, Arial, sans-serif;
+    src: url("fonts/Helvetica.ttf") format("ttf");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -17,10 +17,33 @@
 body {
     background-color: rgb(255, 255, 255);
     color: rgb(50, 59, 76);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Baskerville, Cochin, Georgia, Times, 'Times New Roman', serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+
+.big {
+    grid-column: span 2;
+    grid-row: span 4;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.photo-grid .big {
+    grid-column: auto;
+    grid-row: auto;
+    object-fit: contain;
+    height: auto;
+}
+
+.autoportrait-grid .big {
+    grid-column: auto;
+    grid-row: auto;
+    object-fit: contain;
+    height: auto;
 }
 
 img {
@@ -35,10 +58,10 @@ p {
 }
 
 h1 {
-    font-family: Bocalupo, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: rgb(50, 59, 76);
     margin: 0;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 h2 {
@@ -49,10 +72,10 @@ h2 {
 }
 
 h3 {
-    font-family: Bocalupo, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: rgb(50, 59, 76);
     margin: 0;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 /* En-tête */
@@ -75,14 +98,26 @@ h3 {
 .grid {
     display: grid;
     gap: 10px;
-    margin: 0 auto 10px;
+    margin: 10px auto;
 }
+
 
 @media screen and (min-width: 600px) {
     .grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media screen and (min-width: 900px) {
     .grid { grid-template-columns: repeat(3, 1fr); }
+    .photo-grid .big {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+    .autoportrait-grid {
+        row-gap: 15px;
+    }
+    .autoportrait-grid .big {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 }
 
 /* Lien portfolio */
@@ -117,7 +152,7 @@ h3 {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
     transition: opacity 0.5s ease;
-    font-family: Bocalupo, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: rgb(247, 243, 255);
     font-size: 24px;
     text-align: center;
