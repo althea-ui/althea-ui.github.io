@@ -39,6 +39,16 @@ body {
     height: auto;
 }
 
+.photo-grid {
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+.photo-grid-side {
+    display: grid;
+    gap: 10px;
+}
+
 .autoportrait-grid .big {
     grid-column: auto;
     grid-row: auto;
@@ -104,13 +114,30 @@ h3 {
 
 @media screen and (min-width: 600px) {
     .grid { grid-template-columns: repeat(2, 1fr); }
+    .photo-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    .photo-grid .big {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .photo-grid-side {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc((100% - 10px) / 3);
+        height: 100%;
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        overflow: hidden;
+    }
+    .photo-grid-side img {
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
 }
 @media screen and (min-width: 900px) {
     .grid { grid-template-columns: repeat(3, 1fr); }
-    .photo-grid .big {
-        grid-column: span 2;
-        grid-row: span 3;
-    }
     .autoportrait-grid {
         row-gap: 15px;
     }
